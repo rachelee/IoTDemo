@@ -15,6 +15,7 @@ public class Appliance {
     private String bootstrapURI;
     private String registrationURI;
 
+
     public Appliance(long serialNum, String manufacturer, String modelNum, String firmwareV,
                      int memoryLevel, int batteryLevel, String bootstrapURI, String registrationURI) {
         this.serialNum = serialNum;
@@ -45,12 +46,8 @@ public class Appliance {
     public String getRegistrationURI() {
         return registrationURI;
     }
-//    @Override
-//    public String toString() {
-//        return String.format(
-//                "Appliance[id=%s, name='%s', description='%s']",
-//                id, name, description);
-//    }
+
+
 
 
 

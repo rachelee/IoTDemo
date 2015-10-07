@@ -15,19 +15,20 @@ public class Registration {
     private String firmwareV;
     private int memoryLevel;
     private int batteryLevel;
-    private String bootstrapURI;
-    private String registrationURI;
+    private Date date;
 
+    public Registration(){
+
+    }
     public Registration(long serialNum, String manufacturer, String modelNum, String firmwareV,
-                     int memoryLevel, int batteryLevel) {
+                     int memoryLevel, int batteryLevel, Date date) {
         this.serialNum = serialNum;
         this.manufacturer = manufacturer;
         this.modelNum = modelNum;
         this.firmwareV = firmwareV;
         this.memoryLevel = memoryLevel;
         this.batteryLevel = batteryLevel;
-        this.bootstrapURI = bootstrapURI;
-        this.registrationURI = registrationURI;
+        this.date = date;
     }
 
     public long getSerialNum(){return serialNum;}
@@ -39,21 +40,13 @@ public class Registration {
     public int getMemoryLevel(){
         return memoryLevel;
     }
-    public int getBatteryLevel(){
-        return batteryLevel;
+    public int getBatteryLevel(){ return batteryLevel; }
+    public Date getDate(){ return date;}
+
+    public void setDate(Date date){
+        this.date = date;
     }
-    public String getBootstrapURI() {
-        return bootstrapURI;
-    }
-    public String getRegistrationURI() {
-        return registrationURI;
-    }
-//    @Override
-//    public String toString() {
-//        return String.format(
-//                "Appliance[id=%s, name='%s', description='%s']",
-//                id, name, description);
-//    }
+
 
 
 
